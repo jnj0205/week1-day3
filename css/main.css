@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 0.1fr 1fr 2fr 0.9fr; 
+    gap: 1px 1px; 
+    grid-template-areas: 
+      "nav-bar nav-bar nav-bar nav-bar nav-bar"
+      "main-pic main-pic main-pic main-pic main-pic"
+      ".  shows shows shows ."
+      "bottom bottom bottom bottom bottom"; 
+  
+}
+.nav-bar{
+    grid-area: nav-bar;
+    background-color: grey;
+    position: sticky;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:hover{
+    text-decoration: underline;
+}
+.header{
+    align-self: auto;
+}
+
+.main-pic{
+    grid-area: main-pic;
+    align-self: center;
+   
+}
+.show-s{
+    grid-area: shows;
+    align-items: center;
+    justify-content: center;
+   
+    
+    
+}
+.showtime-info{
+  
+    align-items: center;
+    
+}
+.bottom-social{
+    
+    align-items: baseline;
+    flex-direction: row;
+
+}
+.bottom{
+    grid-area: bottom;
+    
+    flex-direction: row;
+    text-align: center;
+    
+
+}
+
+
