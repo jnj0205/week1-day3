@@ -1,13 +1,13 @@
 body{
     margin: 0;
+    background-color: silver;
 }
 
-.container{
-    min-height: 100vh;
+.container-lg{
+
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
-    grid-template-rows: 0.1fr 1fr 2fr 0.9fr; 
-    gap: 1px 1px; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.5fr 1.5fr 1.9fr 0.5fr; 
     grid-template-areas: 
       "nav-bar nav-bar nav-bar nav-bar nav-bar"
       "main-pic main-pic main-pic main-pic main-pic"
@@ -16,56 +16,39 @@ body{
   
 }
 .nav-bar{
-    grid-area: nav-bar;
-    background-color: grey;
-    position: sticky;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.nav-bar a{
-    color: white;
-    text-decoration: none;
-}
-
-.nav-bar a:hover{
-    text-decoration: underline;
-}
-.header{
-    align-self: auto;
+    display: grid;
+    grid-area: nav-bar; 
+    background-color: darkgray;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: bottom;
 }
 
 .main-pic{
+    display: flex;
     grid-area: main-pic;
-    align-self: center;
+    
    
 }
 .show-s{
+    display: row;
     grid-area: shows;
-    align-items: center;
-    justify-content: center;
-   
-    
     
 }
-.showtime-info{
-  
-    align-items: center;
-    
-}
-.bottom-social{
-    
-    align-items: baseline;
-    flex-direction: row;
 
+.bottom-social{
+    display: column;
+    align-items: left;
 }
 .bottom{
+    display: table-column;
     grid-area: bottom;
-    
-    flex-direction: row;
-    text-align: center;
-    
-
+  
 }
-
-
+.showtime-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.bottom-show{
+    display: column;
+    grid-area: center;
+}
